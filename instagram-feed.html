@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TriTwo Travel Instagram Feed</title>
+    <style>
+      :root {
+        --ink: #17211f;
+        --green: #074536;
+        --green-soft: #0f6b55;
+        --gold: #f2b84b;
+        --coral: #dc6b4d;
+        --paper: #fbfaf5;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1080px;
+        height: 1080px;
+        margin: 0;
+      }
+
+      body {
+        overflow: hidden;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        color: var(--white);
+        background: var(--green);
+      }
+
+      .post {
+        position: relative;
+        width: 1080px;
+        height: 1080px;
+        padding: 64px;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(7, 69, 54, 0.97), rgba(7, 30, 25, 0.9) 58%, rgba(23, 33, 31, 0.98)),
+          radial-gradient(circle at 82% 18%, rgba(242, 184, 75, 0.26), transparent 28%),
+          linear-gradient(28deg, rgba(220, 107, 77, 0.18), transparent 42%);
+      }
+
+      .post::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.16;
+        background:
+          linear-gradient(115deg, transparent 0 58%, rgba(255, 255, 255, 0.4) 58% 58.5%, transparent 58.5%),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 68px);
+      }
+
+      .post::after {
+        content: "";
+        position: absolute;
+        right: -90px;
+        bottom: -90px;
+        width: 430px;
+        height: 430px;
+        border: 42px solid rgba(242, 184, 75, 0.28);
+        border-radius: 50%;
+      }
+
+      .topbar,
+      .content,
+      .stats,
+      .cta {
+        position: relative;
+        z-index: 2;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .logo-wrap {
+        display: grid;
+        width: 92px;
+        height: 92px;
+        place-items: center;
+        padding: 8px;
+        border: 2px solid rgba(255, 255, 255, 0.42);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 22px 46px rgba(0, 0, 0, 0.2);
+      }
+
+      .logo-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .brand-text strong,
+      .brand-text span {
+        display: block;
+      }
+
+      .brand-text strong {
+        font-size: 31px;
+        line-height: 1;
+      }
+
+      .brand-text span {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 18px;
+        font-weight: 750;
+      }
+
+      .route-badge {
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 16px;
+        padding: 17px 22px;
+        color: var(--gold);
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 19px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .content {
+        max-width: 900px;
+        margin-top: 78px;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 880px;
+        font-size: 76px;
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .copy {
+        max-width: 810px;
+        margin: 28px 0 0;
+        color: rgba(255, 255, 255, 0.83);
+        font-size: 30px;
+        font-weight: 520;
+        line-height: 1.42;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 58px;
+      }
+
+      .stat-card {
+        min-height: 184px;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(16px);
+      }
+
+      .stat-card strong {
+        display: block;
+        color: var(--gold);
+        font-size: 66px;
+        line-height: 0.9;
+      }
+
+      .stat-card span {
+        display: block;
+        margin-top: 18px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 21px;
+        font-weight: 760;
+        line-height: 1.25;
+      }
+
+      .cta {
+        position: absolute;
+        left: 64px;
+        right: 64px;
+        bottom: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .guarantee {
+        display: inline-flex;
+        min-height: 66px;
+        align-items: center;
+        border-radius: 16px;
+        padding: 0 26px;
+        color: var(--white);
+        background: var(--coral);
+        font-size: 22px;
+        font-weight: 950;
+      }
+
+      .url {
+        color: var(--gold);
+        font-size: 34px;
+        font-weight: 950;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="post" aria-label="Promosi TriTwo Travel">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo-wrap">
+            <img src="assets/logo.png" alt="TriTwo Travel" />
+          </div>
+          <div class="brand-text">
+            <strong>TriTwo Travel</strong>
+            <span>Rental mobil dengan sopir</span>
+          </div>
+        </div>
+        <div class="route-badge">Payakumbuh - Padang</div>
+      </header>
+
+      <main class="content">
+        <h1>Travel Payakumbuh Padang yang berani jamin tepat waktu.</h1>
+        <p class="copy">
+          Antar jemput nyaman, rental mobil dengan sopir, dan poin 10% di setiap
+          pembayaran. Kalau kami tidak tepat waktu, uang kembali.
+        </p>
+      </main>
+
+      <section class="stats" aria-label="Keunggulan TriTwo Travel">
+        <div class="stat-card">
+          <strong>100%</strong>
+          <span>Tepat waktu atau uang kembali</span>
+        </div>
+        <div class="stat-card">
+          <strong>10%</strong>
+          <span>Poin setiap pembayaran</span>
+        </div>
+        <div class="stat-card">
+          <strong>2</strong>
+          <span>Arah rute Payakumbuh dan Padang</span>
+        </div>
+      </section>
+
+      <footer class="cta">
+        <div class="guarantee">Tepat waktu atau uang kembali</div>
+        <div class="url">Pesan di travel.tritwo.com</div>
+      </footer>
+    </article>
+  </body>
+</html>

@@ -63,13 +63,20 @@ img {
 
 .brand-mark {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   place-items: center;
-  border: 2px solid rgba(255, 255, 255, 0.75);
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.52);
   border-radius: 8px;
-  font-weight: 900;
-  letter-spacing: 0;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand strong,

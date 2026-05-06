@@ -14,7 +14,7 @@ bookingForm?.addEventListener("submit", (event) => {
     `Catatan: ${data.get("catatan") || "-"}`,
   ].join("\n");
 
-  const whatsappNumber = "";
+  const whatsappNumber = "6282170276076";
   const encodedMessage = encodeURIComponent(message);
   const url = whatsappNumber
     ? `https://wa.me/${whatsappNumber}?text=${encodedMessage}`

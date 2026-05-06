@@ -22,7 +22,7 @@
       html,
       body {
         width: 1080px;
-        height: 1080px;
+        height: 1350px;
         margin: 0;
       }
 
@@ -38,8 +38,8 @@
       .post {
         position: relative;
         width: 1080px;
-        height: 1080px;
-        padding: 64px;
+        height: 1350px;
+        padding: 68px;
         overflow: hidden;
         background:
           linear-gradient(135deg, rgba(7, 69, 54, 0.97), rgba(7, 30, 25, 0.9) 58%, rgba(23, 33, 31, 0.98)),
@@ -60,10 +60,10 @@
       .post::after {
         content: "";
         position: absolute;
-        right: -90px;
-        bottom: -90px;
-        width: 430px;
-        height: 430px;
+        right: -112px;
+        bottom: -112px;
+        width: 560px;
+        height: 560px;
         border: 42px solid rgba(242, 184, 75, 0.28);
         border-radius: 50%;
       }
@@ -137,36 +137,40 @@
 
       .content {
         max-width: 900px;
-        margin-top: 78px;
+        margin-top: 84px;
       }
 
       h1 {
         margin: 0;
-        max-width: 880px;
-        font-size: 76px;
-        line-height: 1.02;
+        max-width: 930px;
+        font-size: 80px;
+        line-height: 1.03;
         letter-spacing: 0;
       }
 
       .copy {
-        max-width: 810px;
+        max-width: 900px;
         margin: 28px 0 0;
         color: rgba(255, 255, 255, 0.83);
-        font-size: 30px;
-        font-weight: 520;
-        line-height: 1.42;
+        font-size: 33px;
+        font-weight: 540;
+        line-height: 1.45;
       }
 
       .stats {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         gap: 14px;
-        margin-top: 58px;
+        margin-top: 46px;
+        max-width: 760px;
       }
 
       .stat-card {
-        min-height: 184px;
-        padding: 24px;
+        display: grid;
+        grid-template-columns: 190px 1fr;
+        align-items: center;
+        min-height: 116px;
+        padding: 20px 28px;
         border: 1px solid rgba(255, 255, 255, 0.24);
         border-radius: 18px;
         background: rgba(255, 255, 255, 0.14);
@@ -183,39 +187,38 @@
 
       .stat-card span {
         display: block;
-        margin-top: 18px;
         color: rgba(255, 255, 255, 0.86);
-        font-size: 21px;
+        font-size: 26px;
         font-weight: 760;
-        line-height: 1.25;
+        line-height: 1.22;
       }
 
       .cta {
         position: absolute;
-        left: 64px;
-        right: 64px;
-        bottom: 58px;
+        left: 68px;
+        right: 68px;
+        bottom: 68px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 28px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
       }
 
       .guarantee {
         display: inline-flex;
-        min-height: 66px;
+        min-height: 72px;
         align-items: center;
         border-radius: 16px;
-        padding: 0 26px;
+        padding: 0 30px;
         color: var(--white);
         background: var(--coral);
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 950;
       }
 
       .url {
         color: var(--gold);
-        font-size: 34px;
+        font-size: 44px;
         font-weight: 950;
       }
     </style>

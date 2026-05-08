@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking | TriTwo Rental</title>
+    <meta
+      name="description"
+      content="Pesan rental mobil dengan sopir di Payakumbuh dan Kabupaten Lima Puluh Kota bersama TriTwo Rental."
+    />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="TriTwo Rental">
+        <span class="brand-mark">
+          <img src="assets/logo.png" alt="" />
+        </span>
+        <span>
+          <strong>TriTwo Rental</strong>
+          <small>Payakumbuh & Lima Puluh Kota</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="index.html#layanan">Layanan</a>
+        <a href="index.html#area">Area</a>
+        <a href="index.html#harga">Harga</a>
+        <a href="index.html#poin">Poin</a>
+        <a href="booking.html">Pesan</a>
+      </nav>
+
+      <a class="header-action" href="booking.html">Booking</a>
+    </header>
+
+    <main>
+      <section class="booking" id="pesan">
+        <div class="booking-copy">
+          <p class="eyebrow">Booking</p>
+          <h2>Siapkan perjalanan berikutnya.</h2>
+          <p>
+            Tinggalkan detail sewa, titik jemput, dan tujuan agar tim TriTwo
+            Rental bisa menyiapkan mobil dan sopir terbaik untuk Anda.
+          </p>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <label>
+            Nama
+            <input type="text" name="nama" placeholder="Nama pemesan" required />
+          </label>
+          <label>
+            Layanan
+            <select name="layanan" required>
+              <option value="Rental Harian (dalam kota)">Rental Harian (dalam kota)</option>
+              <option value="Antar Jemput Bandara / Terminal">Antar Jemput Bandara / Terminal</option>
+              <option value="Wisata Keluarga">Wisata Keluarga</option>
+              <option value="Antar Kota dengan Sopir">Antar Kota dengan Sopir</option>
+              <option value="Event / Keperluan Khusus">Event / Keperluan Khusus</option>
+            </select>
+          </label>
+          <label>
+            Tanggal
+            <input type="date" name="tanggal" required />
+          </label>
+          <label>
+            Titik Jemput
+            <input type="text" name="jemput" placeholder="Alamat atau patokan" required />
+          </label>
+          <label class="wide">
+            Catatan
+            <textarea
+              name="catatan"
+              rows="4"
+              placeholder="Jam berangkat, jumlah penumpang, tujuan, atau kebutuhan khusus"
+            ></textarea>
+          </label>
+          <label class="wide checkbox-label">
+            <input type="checkbox" name="setuju" required />
+            Saya telah membaca dan menyetujui <a href="#syarat">syarat & ketentuan</a> yang berlaku.
+          </label>
+          <button class="button primary wide" type="submit">Buat Pesan WhatsApp</button>
+        </form>
+      </section>
+
+      <section class="sk-inline" id="syarat">
+        <div class="sk-inline-inner">
+          <p class="eyebrow">Syarat & Ketentuan</p>
+          <h2>Ketentuan penggunaan layanan TriTwo Rental.</h2>
+
+          <div class="sk-grid">
+            <div class="sk-item">
+              <h3>Wilayah Layanan</h3>
+              <p>Penjemputan dari Kota Payakumbuh, Kabupaten Lima Puluh Kota, Bukittinggi, dan area sekitar. Tujuan perjalanan bebas tanpa batas wilayah.</p>
+            </div>
+            <div class="sk-item">
+              <h3>Pemesanan</h3>
+              <p>Pemesanan dianggap sah setelah tim TriTwo Rental memberikan konfirmasi ketersediaan armada, sopir, waktu, dan titik jemput melalui WhatsApp.</p>
+            </div>
+            <div class="sk-item">
+              <h3>Tarif & Pembayaran</h3>
+              <p>Tarif dihitung per hari sudah termasuk sopir. BBM, tol, dan parkir ditanggung penyewa. Tarif dapat berubah untuk perjalanan jarak jauh atau hari libur nasional.</p>
+            </div>
+            <div class="sk-item">
+              <h3>Pembatalan</h3>
+              <p>Pembatalan lebih dari 24 jam sebelum keberangkatan tidak dikenakan biaya. Pembatalan kurang dari 24 jam atau tidak hadir tanpa konfirmasi dapat dikenakan biaya.</p>
+            </div>
+            <div class="sk-item">
+              <h3>Tanggung Jawab Penyewa</h3>
+              <p>Penyewa bertanggung jawab atas kerusakan kendaraan akibat kelalaian, kehilangan barang pribadi, dan pelanggaran hukum selama menggunakan layanan.</p>
+            </div>
+            <div class="sk-item">
+              <h3>Jaminan Tepat Waktu</h3>
+              <p>Bila sopir terlambat tanpa alasan yang dapat dipertanggungjawabkan, pelanggan berhak mendapatkan pengembalian biaya sewa. Tidak berlaku untuk force majeure.</p>
+            </div>
+            <div class="sk-item">
+              <h3>Program Poin</h3>
+              <p>Setiap pembayaran mendapat poin 10% yang dapat digunakan sebagai potongan harga di transaksi berikutnya. Poin tidak dapat diuangkan secara tunai.</p>
+            </div>
+            <div class="sk-item">
+              <h3>Privasi</h3>
+              <p>Data pribadi pelanggan hanya digunakan untuk keperluan operasional dan tidak dibagikan kepada pihak ketiga tanpa persetujuan pelanggan.</p>
+            </div>
+          </div>
+
+          <p class="sk-full-link">Baca versi lengkap di <a href="syarat-ketentuan.html" target="_blank">halaman Syarat & Ketentuan</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>TriTwo Rental</strong>
+      <span>Rental Mobil dengan Sopir | Payakumbuh & Kab Lima Puluh Kota</span>
+      <a href="syarat-ketentuan.html" style="color: rgba(255,255,255,0.55); font-size: 0.85rem;">Syarat & Ketentuan</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

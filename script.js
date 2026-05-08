@@ -5,7 +5,7 @@ bookingForm?.addEventListener("submit", (event) => {
 
   const data = new FormData(bookingForm);
   const message = [
-    "Halo TriTwo Travel, saya ingin booking.",
+    "Halo TriTwo Rental, saya ingin booking mobil dengan sopir.",
     "",
     `Nama: ${data.get("nama")}`,
     `Layanan: ${data.get("layanan")}`,
